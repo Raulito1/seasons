@@ -1,5 +1,7 @@
 # Getting Started with Create React App
-Seasons Project
+SEASONS PROJECT
+
+this project will ask for your location  depending on your location  it'll display summer or winter to the screen if you choose to deny location it'll display error message
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
