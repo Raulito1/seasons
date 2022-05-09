@@ -1,5 +1,9 @@
 import React from 'react';
 
+// season display css import
+import './SeasonDisplay.css';
+
+// add seasonConfig object to refactor repeated code
 const seasonConfig = {
    summer: {
       text: "Let's hit the beach!",
@@ -22,10 +26,10 @@ const SeasonDisplay = (props) => {
    const season = determineSeason(props.lat, new Date().getMonth());
    const { text, iconName } = seasonConfig[season];
    return (
-      <div>
-         <i className={`${iconName} icon`} />
+      <div className={`season-display ${season}`}>
+         <i className={`icon-left massive ${iconName} icon`} />
          <h1>{text}</h1>
-         <i className={`${iconName} icon`} />
+         <i className={`icon-right massive ${iconName} icon`} />
       </div>
    )
 };
