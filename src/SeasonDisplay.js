@@ -6,11 +6,11 @@ import './SeasonDisplay.css';
 // add seasonConfig object to refactor repeated code
 const seasonConfig = {
    summer: {
-      text: "Let's hit the beach!",
+      text: "It's Summer!! Let's hit the beach!",
       iconName: 'sun'
    },
    winter: {
-      text: "Burr, it's chilly!",
+      text: "Its Winter!! Burr, it's chilly!",
       iconName: 'snowflake'
    }
 }
