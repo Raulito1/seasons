@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 // component imports
 import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
-
+import ErrorPage from './ErrorPage';
 
 class App extends React.Component {
 
@@ -23,16 +23,23 @@ class App extends React.Component {
          }
       );
    }
-   render() {
 
+   // helper method to determine season
+   renderSeasonDisplay() {
       if (this.state.errorMessage && !this.state.lat) {
-         return <div>Error: {this.state.errorMessage}</div>
+         return <ErrorPage errorMessage={this.state.errorMessage} />
       }
       if (!this.state.errorMessage && this.state.lat) {
          return <SeasonDisplay lat={this.state.lat} />
       }
 
       return <Spinner message="Please accept location request" />
+   }
+
+   render() {
+      return (
+         <div>{this.renderSeasonDisplay()}</div>
+      )
    }
 }
 
